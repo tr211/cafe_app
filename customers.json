@@ -1,0 +1,42 @@
+{
+    "Andrey": {
+        "mobile_number": 2233444,
+        "quantity_coffee": 16,
+        "last_updated": "2025-02"
+    },
+    "an dre vivo": {
+        "mobile_number": 223322,
+        "quantity_coffee": 1,
+        "last_updated": "2025-02"
+    },
+    "bubi": {
+        "mobile_number": 334455,
+        "quantity_coffee": 3,
+        "last_updated": "2025-02"
+    },
+    "soffi": {
+        "mobile_number": 11002299,
+        "quantity_coffee": 2,
+        "last_updated": "2025-02"
+    },
+    "andrey": {
+        "mobile_number": 2233444,
+        "quantity_coffee": 2,
+        "last_updated": "2025-02"
+    },
+    "r": {
+        "mobile_number": 3434,
+        "quantity_coffee": 1,
+        "last_updated": "2025-02"
+    },
+    "red": {
+        "mobile_number": 331122,
+        "quantity_coffee": 2,
+        "last_updated": "2025-02"
+    },
+    "pop": {
+        "mobile_number": 113322,
+        "quantity_coffee": 1,
+        "last_updated": "2025-02"
+    }
+}
