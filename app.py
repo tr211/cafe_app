@@ -59,13 +59,15 @@ def add_customer():
     refresh_customer_list()
 
 def search_customer():
-    query = name_entry.get().strip().lower()
-    if not query:
+    name_reques = name_entry.get().strip().lower()
+    mobile_entry_request = mobile_entry.get().strip()
+    
+    if not name_reques and not mobile_entry_request:
         messagebox.showwarning("Input Error", "Enter a Name or Mobile Number to search!")
         return
 
     for name, details in customer_dict.items():
-        if name.lower() == query or str(details['mobile_number']) == query:
+        if (name.lower() == name_reques) or (str(details['mobile_number']) == mobile_entry_request):
             update_coffee_quantity(name, details)
             return
     
@@ -116,7 +118,8 @@ def setup_ui(root):
     refresh_customer_list()
 
     # Bind Enter key
-    root.bind("<Return>", on_enter)
+    # root.bind("<Return>", on_enter)
+    root.bind('<Return>', lambda event: add_customer() if name_entry.get() and mobile_entry.get() else search_customer())
 
 if __name__ == "__main__":
     root = ctk.CTk()

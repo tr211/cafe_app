@@ -11,7 +11,7 @@
     },
     "bubi": {
         "mobile_number": 334455,
-        "quantity_coffee": 3,
+        "quantity_coffee": 7,
         "last_updated": "2025-02"
     },
     "soffi": {
@@ -31,7 +31,7 @@
     },
     "red": {
         "mobile_number": 331122,
-        "quantity_coffee": 2,
+        "quantity_coffee": 3,
         "last_updated": "2025-02"
     },
     "pop": {
