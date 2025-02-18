@@ -224,6 +224,7 @@ def setup_ui(root):
     frame = ctk.CTkFrame(root)
     frame.pack(pady=20, padx=20, fill="both", expand=True)
     
+    # Input Fields
     ctk.CTkLabel(frame, text="Customer Name:", font=("Arial", 14)).pack(pady=5)
     global name_entry, mobile_entry, coffee_entry, customer_listbox
     name_entry = ctk.CTkEntry(frame, placeholder_text="Enter name...")
@@ -237,11 +238,17 @@ def setup_ui(root):
     coffee_entry = ctk.CTkEntry(frame, placeholder_text="e.g. 2,3,1")
     coffee_entry.pack(pady=5)
 
-    ctk.CTkButton(frame, text="Add Customer", command=add_customer).pack(pady=10)
-    ctk.CTkButton(frame, text="Search Customer", command=search_customer).pack(pady=5)
-    ctk.CTkButton(root, text="Export Data", command=export_customers_data).pack(pady=5)
-    ctk.CTkButton(root, text="View Monthly Report", command=view_monthly_sales_report).pack(pady=5)
+    # Button Frame to Group Buttons
+    button_frame = ctk.CTkFrame(frame)
+    button_frame.pack(pady=10)
 
+    # Buttons                                                                  side="left"
+    ctk.CTkButton(button_frame, text="Add Customer", command=add_customer).pack(side="top", padx=5, pady=5)
+    ctk.CTkButton(button_frame, text="Search Customer", command=search_customer).pack(side="top", padx=5, pady=5)
+    ctk.CTkButton(button_frame, text="Export Data", command=export_customers_data).pack(side="top", padx=5, pady=5)
+    ctk.CTkButton(button_frame, text="View Monthly Report", command=view_monthly_sales_report).pack(side="top", padx=5, pady=5)
+
+    # Customer Listbox
     customer_listbox = ctk.CTkTextbox(frame, height=200, width=500)
     customer_listbox.pack(pady=10)
     refresh_customer_list()
