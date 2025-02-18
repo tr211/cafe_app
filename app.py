@@ -216,6 +216,7 @@ def view_monthly_sales_report():
     html_file_path = os.path.abspath(f'{REPORT_DIR}/monthly_sales_report.html')  # Get absolute path
     webbrowser.open(f'file://{html_file_path}')  # Use file:// protocol for local files
 
+
 # Setup UI
 def setup_ui(root):
     root.title("Coffee Shop ☕")
